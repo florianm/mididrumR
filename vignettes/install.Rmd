@@ -1,0 +1,36 @@
+---
+title: "Installation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{install}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(mididrumR)
+```
+
+# Installation
+
+## Dependencies
+This package requires Ubuntu or any other GNU/Linux-based operating system.
+
+Two system libraries provide the interface to the MIDI event stream and send
+keyboard shortcuts.
+
+[aseqdump](https://linux.die.net/man/1/aseqdump) to show the events received 
+at an ALSA sequencer port by [Clemens Ladisch](clemens@ladisch.de).
+
+[xdotool](https://www.semicomplete.com/projects/xdotool/) by 
+[Jordan Sissel](https://www.semicomplete.com/) 
+to simulate keyboard input and mouse activity, move and resize windows, etc. 
+using X11’s XTEST extension and other Xlib functions.
+
