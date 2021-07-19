@@ -5,6 +5,11 @@
 #'   target directory, default: FALSE
 #' @return The path to the deployed script. You will want to edit and adjust
 #'   this script before running it.
+#' @export
+#' @examples
+#' \dontrun{
+#'  target_file <- deploy_script()
+#' }
 deploy_script <- function(dir="~", overwrite=FALSE){
   script <- fs::file_copy(
     system.file("extdata", "mididrumR.sh", package = "mididrumR"),
