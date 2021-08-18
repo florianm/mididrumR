@@ -26,7 +26,7 @@ while IFS=" ," read src e1 e2 e3 e4 e5 rest; do
 
 # Mind that MIDI sends Note "on" and Note "off" events, so trigger only on
 # Note "on".
-# The Yamaha DTXplorer read via te Roland UM-ONE sends the important bits in
+# The Yamaha DTXplorer (via te Roland UM-ONE) sends the important bits in
 # e1, e2, and e5.
 # Other MIDI devices or interfaces might send the improtant bits in other
 # parts of the MIDI message.
@@ -52,7 +52,7 @@ case "$e1 $e2 $e5" in
 # Tom Mid 47: Test
 "Note on 47" ) xdotool key ctrl+shift+t ;;
 
-# Tom Low 43: Build
+# Tom Low 43: Install and restart
 "Note on 43" ) xdotool key ctrl+shift+b ;;
 
 # Crash Cymbal 49: Load all
